@@ -11,7 +11,7 @@
 	<groupId>com.rainbow.ecommerce</groupId>
 	<artifactId>spring-boot-ecommerce</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>spring-boot-ecommerce</name>
 	<description>Spring Boot Ecommerce Project</description>
 
@@ -59,11 +59,14 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
+	        <groupId>org.projectlombok</groupId>
+	        <artifactId>lombok</artifactId>
+	        <version>1.18.24</version>
+	        <scope>provided</scope>
+   		 </dependency>
+			
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -84,33 +87,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
-			<!-- <plugin> 
-				<artifactId>maven-resources-plugin</artifactId> 
-				<executions> 
-					<execution> 
-						<id>copy-resources</id> 
-						<phase>validate</phase> 
-						<goals>
-							<goal>copy-resources</goal>
-						</goals> 
-						<configuration> 
-							<outputDirectory>${build.directory}/classes/static/</outputDirectory >
-	                     		<resources>
-										<resource>
-											<directory>../spring-boot-ecommerce/dist</directory>
-										
-										</resource>
-								</resources>
-						</configuration>
-					</execution>
-	 			</executions>
-			</plugin>
-			-->
-			
-			
-			
-			
 			
 		</plugins>
 	</build>
